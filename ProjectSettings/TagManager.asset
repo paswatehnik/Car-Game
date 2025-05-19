@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - garbage
-  - medic
+  - Garbage
+  - Medic
   - School
   layers:
   - Default

@@ -1,17 +1,19 @@
-# Mr_Bean2d
+# Car_Game
 Otrais Unity 2D projekts.
-Speles merkis ir atrast un novietot katru automasinas attelu tam paredzetaja vieta,
-izmera un rotacija. Speles laika tiek uznemts laiks, 
-lai sasniegtu labaku rezultatu attelu ievietosana ir javeic par iespejas atrak.
+Spēles mērķis ir atrast un novietot katru 
+aumoašīnas attēlu tam paredzētajā vietā, 
+izmērā un rotācijā. Spēles laikā tiek uzņemts laiks, 
+lai sasniegtu labaku rezultātu attēlu ievietošana ir 
+jāveic pēc iespējas ātrāk.
 
 **Darāmo darbu saraskts:**
-- [ ] Izkartot speles laikumu (karte) un izveitot automasinas
-- [ ] Izstrādāt DragAndDrop skriptu
+- [x] Izkārtot spēles laukumu (karte) un izvietot automašīnas
+- [x] Izstrādāt DragAndDrop skriptu
 - [ ] Ieviest skaņas efektus un mūziku
-- [ ] Izstrādāt transformācijas skriptu (izmēra maiņa, rotācija)
-- [ ] Izstrādāt kameras skriptu (pietuvināšana/attālināšana)
+- [ ] Izstrādāt Transformācijas skriptu (izmērs, rotācija)
+- [ ] Izstrādāt kameras skriptu (pietuvināt/attālināt)
 - [ ] Izstrādāt sākuma ainu
 - [ ] Ieviest taimeri
 - [ ] Izstrādāt uzvaras logu un zvaigžņu sistēmu
 - [ ] Papildināt spēles loģiku
-
+- [ ] Izstrādāt otro līmeni

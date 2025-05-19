@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class objectScript : MonoBehaviour
+public class ObjectScript : MonoBehaviour
 {
-    public GameObject GarbageTruck;
-    public GameObject Bus;
-    public GameObject MedicBus;
+    public GameObject garbageTruck;
+    public GameObject schoolBuss;
+    public GameObject medic;
 
     [HideInInspector]
     public Vector2 gTruckPos;
@@ -24,8 +24,8 @@ public class objectScript : MonoBehaviour
 
     void Start()
     {
-        gTruckPos = GarbageTruck.GetComponent<RectTransform>().localPosition;
-        sBussPos = Bus.GetComponent<RectTransform>().localPosition;
-        medicPos = MedicBus.GetComponent<RectTransform>().localPosition;
+        gTruckPos = garbageTruck.GetComponent<RectTransform>().localPosition;
+        sBussPos = schoolBuss.GetComponent<RectTransform>().localPosition;
+        medicPos = medic.GetComponent<RectTransform>().localPosition;
     }
 }

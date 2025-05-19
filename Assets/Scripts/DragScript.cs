@@ -1,15 +1,14 @@
-using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DragScript : MonoBehaviour, IDragHandler, IPointerDownHandler, IBeginDragHandler, IEndDragHandler {
+public class DragScript : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,
+    IDragHandler, IEndDragHandler {
     private RectTransform rectTransform;
     public Canvas canva;
     private CanvasGroup canvasGroup;
-    public objectScript objectScript;
+    public ObjectScript objectScript;
 
     void Start()
     {
@@ -19,10 +18,11 @@ public class DragScript : MonoBehaviour, IDragHandler, IPointerDownHandler, IBeg
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if(Input.GetMouseButton(0) && Input.GetMouseButton(2) == false)
+        if (Input.GetMouseButton(0) && Input.GetMouseButton(2) == false)
         {
             Debug.Log("Pointer Down: " + gameObject.name);
             objectScript.audioSource.PlayOneShot(objectScript.audioClips[0]);
+
         }
     }
 
@@ -31,10 +31,11 @@ public class DragScript : MonoBehaviour, IDragHandler, IPointerDownHandler, IBeg
         if (Input.GetMouseButton(0) && Input.GetMouseButton(2) == false)
         {
             objectScript.lastDragged = null;
-            Debug.Log("Begin drag: " + gameObject.name);
+            Debug.Log("Begin Drag: " + gameObject.name);
             canvasGroup.alpha = 0.6f;
             canvasGroup.blocksRaycasts = false;
             rectTransform.SetSiblingIndex(50);
+
         }
     }
 
@@ -52,13 +53,12 @@ public class DragScript : MonoBehaviour, IDragHandler, IPointerDownHandler, IBeg
             Screen.height - rectTransform.rect.height / 2);
 
         transform.position = mousePosition;
-
     }
 
-    public void OnEndDrag(PointerEventData eventData) { 
-        if(Input.GetMouseButtonUp(0))
-    {
-        Debug.Log("Dragging ended: " + gameObject.name);
+    public void OnEndDrag(PointerEventData eventData) {
+        if (Input.GetMouseButtonUp(0))
+        {
+            Debug.Log("Dragging ended: " + gameObject.name);
             objectScript.lastDragged = eventData.pointerDrag;
             canvasGroup.alpha = 1f;
 
@@ -66,12 +66,15 @@ public class DragScript : MonoBehaviour, IDragHandler, IPointerDownHandler, IBeg
             {
                 canvasGroup.blocksRaycasts = true;
                 objectScript.audioSource.PlayOneShot(objectScript.audioClips[1]);
+            
             }
             else
             {
-                objectScript.lastDragged = null; 
+                objectScript.lastDragged = null;
+                // Varētu tālāk pārbaudīt vai visas mašīnas ir savā vietā
             }
+
             objectScript.rightPlace = false;
-    }
+        }
     }
 }
