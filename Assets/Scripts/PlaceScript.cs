@@ -92,6 +92,52 @@ public class PlaceScript : MonoBehaviour, IDropHandler
                              = objectScript.sBussPos;
                         break;
 
+                    case "shuttleBus":
+                        objectScript.shuttleBus.GetComponent<RectTransform>().localPosition
+                             = objectScript.shuttleBusPos;
+                        break;
+
+                    case "bike":
+                        objectScript.bike.GetComponent<RectTransform>().localPosition
+                             = objectScript.bikePos;
+                        break;
+
+                    case "scooter":
+                        objectScript.scooter.GetComponent<RectTransform>().localPosition
+                             = objectScript.scooterPos;
+                        break;
+
+                    case "lorry":
+                        objectScript.lorry.GetComponent<RectTransform>().localPosition
+                             = objectScript.lorryPos;
+                        break;
+
+                    case "motorcycle":
+                        objectScript.motorcycle.GetComponent<RectTransform>().localPosition
+                             = objectScript.motorcyclePos;
+                        break;
+
+                    case "policeCar":
+                        objectScript.policeCar.GetComponent<RectTransform>().localPosition
+                             = objectScript.policeCarPos;
+                        break;
+
+                    case "moped":
+                        objectScript.moped.GetComponent<RectTransform>().localPosition
+                             = objectScript.mopedPos;
+                        break;
+
+                    case "sportCar":
+                        objectScript.sportCar.GetComponent<RectTransform>().localPosition
+                             = objectScript.sportCarPos;
+                        break;
+
+                    case "van":
+                        objectScript.van.GetComponent<RectTransform>().localPosition
+                             = objectScript.vanPos;
+                        break;
+
+
                     default:
                         Debug.LogError("Unknown tag!");
                         break;
