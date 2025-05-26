@@ -69,4 +69,41 @@ public class ObjectScript : MonoBehaviour
         sportCarPos = sportCar.GetComponent<RectTransform>().localPosition;
         vanPos = van.GetComponent<RectTransform>().localPosition;
     }
+
+public bool CheckAllCarsInPlace()
+{
+    bool garbageInPlace = CheckCarPosition(garbageTruck, gTruckPos);
+    bool schoolBusInPlace = CheckCarPosition(schoolBuss, sBussPos);
+    bool medicInPlace = CheckCarPosition(medic, medicPos);
+    bool shuttleInPlace = CheckCarPosition(shuttleBus, shuttleBusPos);
+    bool bikeInPlace = CheckCarPosition(bike, bikePos);
+    bool scooterInPlace = CheckCarPosition(scooter, scooterPos);
+    bool lorryInPlace = CheckCarPosition(lorry, lorryPos);
+    bool motorcycleInPlace = CheckCarPosition(motorcycle, motorcyclePos);
+    bool policeInPlace = CheckCarPosition(policeCar, policeCarPos);
+    bool mopedInPlace = CheckCarPosition(moped, mopedPos);
+    bool sportCarInPlace = CheckCarPosition(sportCar, sportCarPos);
+    bool vanInPlace = CheckCarPosition(van, vanPos);
+    
+    return garbageInPlace && schoolBusInPlace && medicInPlace &&
+               shuttleInPlace && bikeInPlace && scooterInPlace &&
+               lorryInPlace && motorcycleInPlace && policeInPlace &&
+               mopedInPlace && sportCarInPlace && vanInPlace;
+}
+
+private bool CheckCarPosition(GameObject car, Vector2 correctPosition)
+{
+    RectTransform carTransform = car.GetComponent<RectTransform>();
+    
+    bool positionCorrect = Vector2.Distance(carTransform.anchoredPosition, correctPosition) < 10f;
+    
+    float rotation = carTransform.eulerAngles.z;
+    bool rotationCorrect = (rotation <= 10f || rotation >= 350f);
+    
+    Vector3 scale = carTransform.localScale;
+    bool scaleCorrect = Mathf.Abs(scale.x - 1f) < 0.1f && Mathf.Abs(scale.y - 1f) < 0.1f;
+    
+    return positionCorrect && rotationCorrect && scaleCorrect;
+}
+
 }

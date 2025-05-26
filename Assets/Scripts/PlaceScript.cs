@@ -66,39 +66,39 @@ public class PlaceScript : MonoBehaviour, IDropHandler
 
 
                         case "shuttleBus":
-                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[3]);
+                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[6]);
                             break;
 
                         case "bike":
-                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[3]);
+                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[7]);
                             break;
 
                         case "scooter":
-                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[3]);
+                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[8]);
                             break;
 
                         case "lorry":
-                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[3]);
+                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[9]);
                             break;
 
                         case "motorcycle":
-                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[3]);
+                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[10]);
                             break;
 
                         case "policeCar":
-                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[3]);
+                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[11]);
                             break;
 
                         case "moped":
-                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[3]);
+                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[12]);
                             break;
 
                         case "sportCar":
-                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[3]);
+                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[5]);
                             break;   
 
                         case "van":
-                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[3]);
+                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[13]);
                             break;
 
 
