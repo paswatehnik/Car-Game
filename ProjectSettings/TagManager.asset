@@ -7,6 +7,15 @@ TagManager:
   - Garbage
   - Medic
   - School
+  - shuttleBus
+  - bike
+  - lorry
+  - scooter
+  - motorcycle
+  - policeCar
+  - moped
+  - sportCar
+  - van
   layers:
   - Default
   - TransparentFX

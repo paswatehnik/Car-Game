@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.894441, g: 0.35472122, b: 0.23591214, a: 1}
+  m_IndirectSpecularColor: {r: 0.894441, g: 0.35472122, b: 0.23591223, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 352, y: -192}
+  m_AnchoredPosition: {x: 377.5, y: -170.88}
   m_SizeDelta: {x: 95, y: 95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &22394077
@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 87502656}
   m_Layer: 5
   m_Name: lorryPlace
-  m_TagString: Medic
+  m_TagString: lorry
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -247,7 +247,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -0.849, y: 1075.439, z: -10.516}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 152, y: -61}
+  m_AnchoredPosition: {x: 164, y: -22}
   m_SizeDelta: {x: 105, y: 105}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &87502656
@@ -315,7 +315,7 @@ GameObject:
   - component: {fileID: 174240086}
   m_Layer: 5
   m_Name: policeCarPlace
-  m_TagString: Medic
+  m_TagString: policeCar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -336,7 +336,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 292, y: 373}
+  m_AnchoredPosition: {x: 254, y: 325}
   m_SizeDelta: {x: 95, y: 95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &174240086
@@ -404,7 +404,7 @@ GameObject:
   - component: {fileID: 263379637}
   m_Layer: 5
   m_Name: shuttleBusPlace
-  m_TagString: Medic
+  m_TagString: shuttleBus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -425,7 +425,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -447.147}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -101, y: -100}
+  m_AnchoredPosition: {x: -120.5, y: 63}
   m_SizeDelta: {x: 105, y: 105}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &263379637
@@ -494,7 +494,7 @@ GameObject:
   - component: {fileID: 379354829}
   m_Layer: 5
   m_Name: scooter
-  m_TagString: Untagged
+  m_TagString: scooter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -515,7 +515,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -459.9, y: 361.1}
+  m_AnchoredPosition: {x: -889, y: 312.5}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &379354829
@@ -566,7 +566,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: a97fe135057a64446b56ba8e0b3c2a60, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -615,9 +615,27 @@ MonoBehaviour:
   garbageTruck: {fileID: 921599512}
   schoolBuss: {fileID: 726295147}
   medic: {fileID: 928083195}
+  shuttleBus: {fileID: 625386858}
+  bike: {fileID: 970886755}
+  scooter: {fileID: 379354827}
+  lorry: {fileID: 1706836898}
+  motorcycle: {fileID: 465627274}
+  policeCar: {fileID: 504774500}
+  moped: {fileID: 1732416044}
+  sportCar: {fileID: 1901197946}
+  van: {fileID: 1462394667}
   gTruckPos: {x: 0, y: 0}
   sBussPos: {x: 0, y: 0}
   medicPos: {x: 0, y: 0}
+  shuttleBusPos: {x: 0, y: 0}
+  bikePos: {x: 0, y: 0}
+  scooterPos: {x: 0, y: 0}
+  lorryPos: {x: 0, y: 0}
+  motorcyclePos: {x: 0, y: 0}
+  policeCarPos: {x: 0, y: 0}
+  mopedPos: {x: 0, y: 0}
+  sportCarPos: {x: 0, y: 0}
+  vanPos: {x: 0, y: 0}
   audioSource: {fileID: 2103107097}
   audioClips:
   - {fileID: 8300000, guid: 45b46388252ff62448ad451517890a75, type: 3}
@@ -669,7 +687,7 @@ GameObject:
   - component: {fileID: 446638746}
   m_Layer: 5
   m_Name: mopedPlace
-  m_TagString: Medic
+  m_TagString: moped
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -690,7 +708,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 581, y: -343}
+  m_AnchoredPosition: {x: 577, y: -379}
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &446638746
@@ -759,7 +777,7 @@ GameObject:
   - component: {fileID: 465627276}
   m_Layer: 5
   m_Name: motorcycle
-  m_TagString: Untagged
+  m_TagString: motorcycle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -780,7 +798,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -622, y: -215}
+  m_AnchoredPosition: {x: -799, y: -155.88}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &465627276
@@ -831,7 +849,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: e3c6e174edecda7488184f1feaee2675, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -862,7 +880,7 @@ GameObject:
   - component: {fileID: 504774502}
   m_Layer: 5
   m_Name: policeCar
-  m_TagString: Untagged
+  m_TagString: policeCar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -883,7 +901,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 215, y: -451}
+  m_AnchoredPosition: {x: 227, y: -375}
   m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &504774502
@@ -934,7 +952,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 088426f8f11b9154cb11cb2a40e883af, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1184,7 +1202,7 @@ GameObject:
   - component: {fileID: 585122613}
   m_Layer: 5
   m_Name: vanPlace
-  m_TagString: Medic
+  m_TagString: van
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1205,7 +1223,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 639, y: 36}
+  m_AnchoredPosition: {x: 756.1, y: 42.5}
   m_SizeDelta: {x: 85, y: 85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &585122613
@@ -1274,7 +1292,7 @@ GameObject:
   - component: {fileID: 625386860}
   m_Layer: 5
   m_Name: shuttleBus
-  m_TagString: Untagged
+  m_TagString: shuttleBus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1295,7 +1313,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -404, y: -335}
+  m_AnchoredPosition: {x: -342.38, y: -291.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &625386860
@@ -1346,7 +1364,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 540023d224ce03f47b5f084feb16e783, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1376,7 +1394,7 @@ GameObject:
   - component: {fileID: 708543218}
   m_Layer: 5
   m_Name: motorcyclePlace
-  m_TagString: Medic
+  m_TagString: motorcycle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1397,7 +1415,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -49.435}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -257, y: 545}
+  m_AnchoredPosition: {x: -295, y: 458}
   m_SizeDelta: {x: 85, y: 85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &708543218
@@ -1487,7 +1505,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 26.65}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 678.6, y: 541}
+  m_AnchoredPosition: {x: 678.6, y: 436.5}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &726295149
@@ -1590,7 +1608,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 668.6, y: -495}
+  m_AnchoredPosition: {x: 800, y: -505}
   m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &921599514
@@ -1693,7 +1711,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 14.32}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 522, y: 365}
+  m_AnchoredPosition: {x: 518, y: 323}
   m_SizeDelta: {x: 73, y: 73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &928083197
@@ -1775,7 +1793,7 @@ GameObject:
   - component: {fileID: 970886757}
   m_Layer: 5
   m_Name: bike
-  m_TagString: Untagged
+  m_TagString: bike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1796,7 +1814,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 470, y: 77}
+  m_AnchoredPosition: {x: 561, y: -170.88}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &970886757
@@ -1847,7 +1865,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 6b647069fa88063479108da613bc463f, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1898,7 +1916,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -208, y: -192}
+  m_AnchoredPosition: {x: -233, y: -161}
   m_SizeDelta: {x: 81.872, y: 52.7517}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1165902422
@@ -2035,7 +2053,7 @@ GameObject:
   - component: {fileID: 1462394669}
   m_Layer: 5
   m_Name: van
-  m_TagString: Untagged
+  m_TagString: van
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2056,7 +2074,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -269.958}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 385, y: 0}
+  m_AnchoredPosition: {x: 441.5, y: 173}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1462394669
@@ -2107,7 +2125,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: df0ae9e90d5d46d48b7f180a8e9b6caa, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -2137,7 +2155,7 @@ GameObject:
   - component: {fileID: 1467947908}
   m_Layer: 5
   m_Name: sportCarPlace
-  m_TagString: Medic
+  m_TagString: sportCar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2158,7 +2176,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -363, y: 363}
+  m_AnchoredPosition: {x: -506.5, y: 307}
   m_SizeDelta: {x: 105, y: 105}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1467947908
@@ -2227,7 +2245,7 @@ GameObject:
   - component: {fileID: 1706836900}
   m_Layer: 5
   m_Name: lorry
-  m_TagString: Untagged
+  m_TagString: lorry
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2248,7 +2266,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 87, y: 381}
+  m_AnchoredPosition: {x: 25, y: 312.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1706836900
@@ -2299,7 +2317,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: b2199c2bb969e934ab0f5d838aa398c8, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -2404,7 +2422,7 @@ GameObject:
   - component: {fileID: 1713315564}
   m_Layer: 5
   m_Name: scooterPlace
-  m_TagString: Medic
+  m_TagString: scooter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2425,7 +2443,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -30.158}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -547, y: -329}
+  m_AnchoredPosition: {x: -639, y: -292.5}
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1713315564
@@ -2494,7 +2512,7 @@ GameObject:
   - component: {fileID: 1732416046}
   m_Layer: 5
   m_Name: moped
-  m_TagString: Untagged
+  m_TagString: moped
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2515,7 +2533,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -103, y: 167}
+  m_AnchoredPosition: {x: -558, y: 157.62}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1732416046
@@ -2566,7 +2584,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 8c7559239fa57ea408b1fc30f95b96b3, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -2597,7 +2615,7 @@ GameObject:
   - component: {fileID: 1901197948}
   m_Layer: 5
   m_Name: sportCar
-  m_TagString: Untagged
+  m_TagString: sportCar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2618,7 +2636,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -629.098}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -106, y: -527}
+  m_AnchoredPosition: {x: -123, y: -466.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1901197948
@@ -2669,7 +2687,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: d85c76cd049e5a840b397411ea71befd, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -2699,7 +2717,7 @@ GameObject:
   - component: {fileID: 2036919150}
   m_Layer: 5
   m_Name: bikePlace
-  m_TagString: Medic
+  m_TagString: bike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2720,7 +2738,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -375, y: -129}
+  m_AnchoredPosition: {x: -527.4, y: -155.88}
   m_SizeDelta: {x: 65, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2036919150
@@ -2809,7 +2827,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -378.8, y: 172.2}
+  m_AnchoredPosition: {x: -351.44, y: 149}
   m_SizeDelta: {x: 81.872, y: 52.7517}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2046085302

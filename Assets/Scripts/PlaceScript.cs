@@ -63,6 +63,45 @@ public class PlaceScript : MonoBehaviour, IDropHandler
                             objectScript.audioSource.PlayOneShot(objectScript.audioClips[3]);
                             break;
 
+
+
+                        case "shuttleBus":
+                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[3]);
+                            break;
+
+                        case "bike":
+                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[3]);
+                            break;
+
+                        case "scooter":
+                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[3]);
+                            break;
+
+                        case "lorry":
+                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[3]);
+                            break;
+
+                        case "motorcycle":
+                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[3]);
+                            break;
+
+                        case "policeCar":
+                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[3]);
+                            break;
+
+                        case "moped":
+                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[3]);
+                            break;
+
+                        case "sportCar":
+                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[3]);
+                            break;   
+
+                        case "van":
+                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[3]);
+                            break;
+
+
                         default:
                             Debug.LogError("Unknown tag!");
                             break;
