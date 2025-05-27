@@ -1,6 +1,9 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class ObjectScript : MonoBehaviour
 {
@@ -52,6 +55,13 @@ public class ObjectScript : MonoBehaviour
     public bool rightPlace = false;
     public GameObject lastDragged = null;
 
+    [Header("Completion Panel")]
+    public GameObject completionPanel;
+    public TextMeshProUGUI timeText;
+    public Image[] stars;
+
+    private float startTime;
+    private bool levelCompleted = false;
 
     void Start()
     {
@@ -68,42 +78,133 @@ public class ObjectScript : MonoBehaviour
         mopedPos = moped.GetComponent<RectTransform>().localPosition;
         sportCarPos = sportCar.GetComponent<RectTransform>().localPosition;
         vanPos = van.GetComponent<RectTransform>().localPosition;
+
+        startTime = Time.time;
+        if (completionPanel != null)
+            completionPanel.SetActive(false);
     }
 
-public bool CheckAllCarsInPlace()
-{
-    bool garbageInPlace = CheckCarPosition(garbageTruck, gTruckPos);
-    bool schoolBusInPlace = CheckCarPosition(schoolBuss, sBussPos);
-    bool medicInPlace = CheckCarPosition(medic, medicPos);
-    bool shuttleInPlace = CheckCarPosition(shuttleBus, shuttleBusPos);
-    bool bikeInPlace = CheckCarPosition(bike, bikePos);
-    bool scooterInPlace = CheckCarPosition(scooter, scooterPos);
-    bool lorryInPlace = CheckCarPosition(lorry, lorryPos);
-    bool motorcycleInPlace = CheckCarPosition(motorcycle, motorcyclePos);
-    bool policeInPlace = CheckCarPosition(policeCar, policeCarPos);
-    bool mopedInPlace = CheckCarPosition(moped, mopedPos);
-    bool sportCarInPlace = CheckCarPosition(sportCar, sportCarPos);
-    bool vanInPlace = CheckCarPosition(van, vanPos);
-    
-    return garbageInPlace && schoolBusInPlace && medicInPlace &&
-               shuttleInPlace && bikeInPlace && scooterInPlace &&
-               lorryInPlace && motorcycleInPlace && policeInPlace &&
-               mopedInPlace && sportCarInPlace && vanInPlace;
-}
+    void Update()
+    {
+        if (!levelCompleted)
+        {
+            bool allInPlace = CheckAllCarsInPlace();
+            if (allInPlace)
+            {
+                Debug.Log("All cars in place! Proceeding to show completion panel");
+                levelCompleted = true;
+                ShowCompletionPanel();
+            }
+        }
+    }
 
-private bool CheckCarPosition(GameObject car, Vector2 correctPosition)
-{
-    RectTransform carTransform = car.GetComponent<RectTransform>();
-    
-    bool positionCorrect = Vector2.Distance(carTransform.anchoredPosition, correctPosition) < 10f;
-    
-    float rotation = carTransform.eulerAngles.z;
-    bool rotationCorrect = (rotation <= 10f || rotation >= 350f);
-    
-    Vector3 scale = carTransform.localScale;
-    bool scaleCorrect = Mathf.Abs(scale.x - 1f) < 0.1f && Mathf.Abs(scale.y - 1f) < 0.1f;
-    
-    return positionCorrect && rotationCorrect && scaleCorrect;
-}
+    private void ShowCompletionPanel()
+    {
+        Debug.Log("ShowCompletionPanel called");
+        completionPanel.SetActive(true);
+        completionPanel.GetComponent<Image>().color = Color.red;
+    }
 
+    private IEnumerator ShowStarsOneByOne(int starsCount)
+    {
+        foreach (var star in stars)
+        {
+            if (star != null) star.gameObject.SetActive(false);
+        }
+
+        for (int i = 0; i < starsCount; i++)
+        {
+            if (stars[i] != null)
+            {
+                stars[i].gameObject.SetActive(true);
+                stars[i].transform.localScale = Vector3.zero;
+
+                float duration = 0.5f;
+                float elapsed = 0f;
+
+                while (elapsed < duration)
+                {
+                    elapsed += Time.deltaTime;
+                    stars[i].transform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, elapsed / duration);
+                    yield return null;
+                }
+
+                yield return new WaitForSeconds(0.3f);
+            }
+        }
+    }
+
+
+
+    private int CalculateStars(float timeSpent)
+    {
+        if (timeSpent < 60) return 3;
+        if (timeSpent < 120) return 2;
+        return 1;
+    }
+
+    public bool CheckAllCarsInPlace()
+    {
+        Debug.Log("--- Checking car positions ---");
+
+        bool garbageInPlace = CheckCarPosition(garbageTruck, gTruckPos, "Garbage Truck");
+        bool schoolBusInPlace = CheckCarPosition(schoolBuss, sBussPos, "School Bus");
+        bool medicInPlace = CheckCarPosition(medic, medicPos, "Medic");
+        bool shuttleInPlace = CheckCarPosition(shuttleBus, shuttleBusPos, "Shuttle Bus");
+        bool bikeInPlace = CheckCarPosition(bike, bikePos, "Bike");
+        bool scooterInPlace = CheckCarPosition(scooter, scooterPos, "Scooter");
+        bool lorryInPlace = CheckCarPosition(lorry, lorryPos, "Lorry");
+        bool motorcycleInPlace = CheckCarPosition(motorcycle, motorcyclePos, "Motorcycle");
+        bool policeInPlace = CheckCarPosition(policeCar, policeCarPos, "Police Car");
+        bool mopedInPlace = CheckCarPosition(moped, mopedPos, "Moped");
+        bool sportCarInPlace = CheckCarPosition(sportCar, sportCarPos, "Sport Car");
+        bool vanInPlace = CheckCarPosition(van, vanPos, "Van");
+
+        bool allCorrect = garbageInPlace && schoolBusInPlace && medicInPlace &&
+                         shuttleInPlace && bikeInPlace && scooterInPlace &&
+                         lorryInPlace && motorcycleInPlace && policeInPlace &&
+                         mopedInPlace && sportCarInPlace && vanInPlace;
+
+        if (!allCorrect)
+        {
+            Debug.Log("Some cars are NOT in place:");
+            if (!garbageInPlace) Debug.Log("- Garbage Truck not in place");
+            if (!schoolBusInPlace) Debug.Log("- School Bus not in place");
+            if (!medicInPlace) Debug.Log("- Medic not in place");
+            if (!shuttleInPlace) Debug.Log("- Shuttle Bus not in place");
+            if (!bikeInPlace) Debug.Log("- Bike not in place");
+            if (!scooterInPlace) Debug.Log("- Scooter not in place");
+            if (!lorryInPlace) Debug.Log("- Lorry not in place");
+            if (!motorcycleInPlace) Debug.Log("- Motorcycle not in place");
+            if (!policeInPlace) Debug.Log("- Police Car not in place");
+            if (!mopedInPlace) Debug.Log("- Moped not in place");
+            if (!sportCarInPlace) Debug.Log("- Sport Car not in place");
+            if (!vanInPlace) Debug.Log("- Van not in place");
+        }
+
+        return allCorrect;
+    }
+
+    private bool CheckCarPosition(GameObject car, Vector2 correctPosition, string carName)
+    {
+        if (car == null)
+        {
+            Debug.LogError($"{carName} is null!");
+            return false;
+        }
+
+        RectTransform carTransform = car.GetComponent<RectTransform>();
+        if (carTransform == null)
+        {
+            Debug.LogError($"{carName} has no RectTransform!");
+            return false;
+        }
+
+        float distance = Vector2.Distance(carTransform.anchoredPosition, correctPosition);
+        bool positionCorrect = distance < 20f;
+
+        Debug.Log($"{carName} - Current: {carTransform.anchoredPosition} | Target: {correctPosition} | Distance: {distance} | InPlace: {positionCorrect}");
+
+        return positionCorrect;
+    }
 }
