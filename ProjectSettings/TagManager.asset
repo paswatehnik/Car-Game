@@ -16,6 +16,18 @@ TagManager:
   - moped
   - sportCar
   - van
+  - airplane
+  - boat
+  - bus
+  - cat
+  - firecar
+  - helicopter
+  - house
+  - skateboard
+  - sun
+  - taxi
+  - traficlight
+  - tree
   layers:
   - Default
   - TransparentFX
