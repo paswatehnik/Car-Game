@@ -9,11 +9,11 @@ jāveic pēc iespējas ātrāk.
 **Darāmo darbu saraskts:**
 - [x] Izkārtot spēles laukumu (karte) un izvietot automašīnas
 - [x] Izstrādāt DragAndDrop skriptu
-- [ ] Ieviest skaņas efektus un mūziku
-- [ ] Izstrādāt Transformācijas skriptu (izmērs, rotācija)
+- [x] Ieviest skaņas efektus un mūziku
+- [x] Izstrādāt Transformācijas skriptu (izmērs, rotācija)
 - [ ] Izstrādāt kameras skriptu (pietuvināt/attālināt)
-- [ ] Izstrādāt sākuma ainu
+- [x] Izstrādāt sākuma ainu
 - [ ] Ieviest taimeri
 - [ ] Izstrādāt uzvaras logu un zvaigžņu sistēmu
 - [ ] Papildināt spēles loģiku
-- [ ] Izstrādāt otro līmeni
+- [x] Izstrādāt otro līmeni
